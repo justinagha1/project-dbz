@@ -6,21 +6,44 @@ A web page about Dragon Ball Z
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dragon Ball Z</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1><em>Dragon Ball Z</em></h1>
-    <div>
-      <p>Dragon Ball Z follows the adventures of Goku who, along with the Z Warriors, defends the Earth against evil. <br> The action adventures are entertaining and reinforce the concept of good versus evil. <br> Dragon Ball Z teaches valuable character virtues such as teamwork, loyalty, and trustworthiness.</p>
-      <select>
-        <option>Test</option>
-      </select>
-      <input type="button" value="Let's Go!">
+    <div id="bg">
+        <h1>Dragon Ball Z</h1>
+        <div class="panel">
+          <p>Dragon Ball Z follows the adventures of Goku who, along with the Z Warriors, defends the Earth against evil. <br> The action adventures are entertaining and reinforce the concept of good versus evil. <br> Dragon Ball Z teaches valuable character virtues such as teamwork, loyalty, and trustworthiness.</p>
+
+          <!-- Dropdown for character selection -->
+          <select name="character" id="character">
+            <option value="goku">Goku</option>
+            <option value="vegeta">Vegeta</option>
+            <option value="gohan">Gohan</option>
+            <option value="piccolo">Piccolo</option>
+            <option value="trunks">Trunks</option>
+            <option value="bulma">Bulma</option>
+            <option value="krillin">Krillin</option>
+          </select>
+
+          <!-- Button to confirm selection -->
+          <input type="button" value="Select Character" onclick="selectCharacter()">
+
+        </div>
+        <div class="panel">
+          <img src="" alt="">
+        </div>
     </div>
-    <div>
-      <img src="" alt="">
-    </div>
+
+    <!-- JavaScript to handle the button click -->
+    <script>
+      function selectCharacter() {
+        const character = document.getElementById("character").value;
+        alert("You selected: " + character);
+        // You can add more logic here to handle the selection
+      }
+    </script>
   </body>
 </html>
