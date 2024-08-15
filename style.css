@@ -1,7 +1,7 @@
 /* This is the styling for my DBZ webpage. */
 
 * {
-  color: rgb(255, 7, 7);
+  color: rgb(222, 67, 0);
   font-size: 18px;
   line-height: 1.8;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -23,7 +23,7 @@ html, body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align items towards the top */
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   padding: 5px;
@@ -37,14 +37,6 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.57);
 }
 
-p {
-  color:rgb(235, 239, 241);
-  max-width: 1000px;
-  margin: 20px 0;
-  background-color: rgba(0, 0, 0, 0.566); /* Semi-transparent background for better readability */
-  padding: 15px;
-  border-radius: 10px;
-}
 
 select, input[type="button"] {
   margin-top: 10px;

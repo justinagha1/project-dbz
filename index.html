@@ -5,46 +5,52 @@ A web page about Dragon Ball Z
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragon Ball Z</title>
+    <title>Dragon Ball Z Characters</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+<body>
     <div id="bg">
-        <h1>Dragon Ball Z</h1>
-        <div class="panel">
-          <p>Dragon Ball Z follows the adventures of Goku who, along with the Z Warriors, defends the Earth against evil. <br> The action adventures are entertaining and reinforce the concept of good versus evil. <br> Dragon Ball Z teaches valuable character virtues such as teamwork, loyalty, and trustworthiness.</p>
+        <h1>Dragon Ball Z Characters</h1>
 
-          <!-- Dropdown for character selection -->
-          <select name="character" id="character">
-            <option value="goku">Goku</option>
-            <option value="vegeta">Vegeta</option>
-            <option value="gohan">Gohan</option>
-            <option value="piccolo">Piccolo</option>
-            <option value="trunks">Trunks</option>
-            <option value="bulma">Bulma</option>
-            <option value="krillin">Krillin</option>
-          </select>
+        <!-- Feature 3: Filter Section -->
+        <div class="filter">
+            <select id="raceSelect">
+                <option value="">Select Race</option>
+                <option value="Saiyan">Saiyan</option>
+                <option value="Human">Human</option>
 
-          <!-- Button to confirm selection -->
-          <input type="button" value="Select Character" onclick="selectCharacter()">
+            </select>
+            <select id="affiliationSelect">
+                <option value="">Select Affiliation</option>
+                <option value="Z Fighter">Z Fighter</option>
+                <option value="Villain">Villain</option>
 
+            </select>
+            <button onclick="filterCharacters()">Filter</button>
         </div>
-        <div class="panel">
-          <img src="" alt="">
+
+        <!-- Feature 1: Character List -->
+        <div id="characterList">
+            <!-- Character names will be dynamically inserted here -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div id="pagination">
+            <button onclick="navigate('first')">First</button>
+            <button onclick="navigate('previous')">Previous</button>
+            <button onclick="navigate('next')">Next</button>
+            <button onclick="navigate('last')">Last</button>
+        </div>
+
+        <!-- Feature 2: Character Details -->
+        <div id="characterDetails">
+
         </div>
     </div>
 
-    <!-- JavaScript to handle the button click
-    <script>
-      function selectCharacter() {
-        const character = document.getElementById("character").value;
-        alert("You selected: " + character);
-        // You can add more logic here to handle the selection
-      }
-    </script> -->
-  </body>
+    <script src="characters.js"></script>
+</body>
 </html>
-<script src="characters.js"></script>
